@@ -8,27 +8,27 @@ this is a tool design for data analysis of [EvolutionaryComposition][]
 
 =============
 
-#####usage:
+####usage:
 
 make your data sets output separate with a new line
 
 example, if you have two kinds of data sets:
 
-data1
-data2
-data1
-data2
-...
+data1<br>
+data2<br>
+data1<br>
+data2<br>
+...<br>
 
 else, three kinds of data sets:
 
-data1
-data2
-data3
-data1
-data2
-data3
-...
+data1<br>
+data2<br>
+data3<br>
+data1<br>
+data2<br>
+data3<br>
+...<br>
 
 and make sure you set a right number in "Plot number" to plot the correct number of data set
 
@@ -36,3 +36,4 @@ and make sure you set a right number in "Plot number" to plot the correct number
 =============
 
 rf37535@gmail.com Any question and suggestion
+<br>
