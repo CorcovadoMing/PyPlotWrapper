@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
 
 dataList = list()
 
@@ -19,17 +20,21 @@ def read_from_file(filename, plotNum):
             else:
                 dataList[x].append(float(data))
 
-def plot_subarea(plotNum, subplotArea):
+def plot_subarea(plotNum, subplotArea, fig):
     subplotList = [0,11,21,22,22]
     dataNum = len(dataList[0])
     x = np.arange(dataNum)
+    z = np.zeros(dataNum)
     subplotParameter = int( str(subplotList[plotNum]) + str(subplotArea+1) )
-    plt.subplot(subplotParameter)
-    plt.plot(x, dataList[subplotArea], "r-")
+    #plt.subplot(subplotParameter)
+    ax = fig.add_subplot(subplotParameter, projection='3d')
+    ax.plot(x, z, dataList[subplotArea])
 
 def plot_and_show(plotNum):
+    fig = plt.figure()
+    fig.suptitle('3D Plot')
     for subplotArea in range(plotNum):
-        plot_subarea(plotNum, subplotArea)
+        plot_subarea(plotNum, subplotArea, fig)
     plt.show()
     
 
