@@ -8,7 +8,10 @@ def open_file_and_close_root():
 
 def assign_plotNum(*args):
     global plotNum
-    plotNum = plotEntryNum.get()
+    try:
+        plotNum = plotEntryNum.get()
+    except:
+        pass
 
 def ask_file_name():
     global filename
