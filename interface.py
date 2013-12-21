@@ -43,6 +43,7 @@ if __name__ == '__main__':
     
     root.mainloop()
     ask_file_name()
-    read_from_file(filename, plotNum)
-    plot_and_show(plotNum)
+    dataList = [[] for num in range(plotNum)]
+    read_from_file(filename, plotNum, dataList)
+    plot_and_show(plotNum, dataList)
     
